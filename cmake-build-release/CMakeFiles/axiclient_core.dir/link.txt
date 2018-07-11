@@ -1,0 +1,2 @@
+/usr/bin/ar qc libaxiclient_core.a  CMakeFiles/axiclient_core.dir/axiopcjsonclient.cpp.o CMakeFiles/axiclient_core.dir/easylogging++.cc.o CMakeFiles/axiclient_core.dir/simpleclient.cpp.o
+/usr/bin/ranlib libaxiclient_core.a

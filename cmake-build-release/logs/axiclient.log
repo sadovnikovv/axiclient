@@ -1,0 +1,105 @@
+09/11/17 02:59:39,063 PM INFO -> Обычное сообщение
+09/11/17 02:59:39,064 PM ERROR -> Ошибка должна стать красной
+09/11/17 02:59:39,064 PM WARNING -> А предупреждение желтым
+09/11/17 02:59:41,590 PM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"OpenData","params":{"ConfigID":"11/09/17 02:59:39 PM","SN":"333333333333333333333333333333333333","sDataValue":[{"DateTime":"\/Date(1510228780000+0300)\/","ID":1,"Status":0,"Value":"0"}],"sStatus":{"AlarmLevel":0,"Messages":["Control chenal"]}}}
+09/11/17 02:59:41,869 PM INFO -> Принято 
+{"id":1,"jsonrpc":"2.0","result":{"DataWriteValue":null,"ReadIDs":null,"SessionID":"2376552a-6151-4c30-89d5-2d76c4649f49","isRequiredUpdate":true}}
+
+09/11/17 02:59:41,875 PM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"SetMetaData","params":{"SessionID":"2376552a-6151-4c30-89d5-2d76c4649f49","sConfigDevice":{"PropertyDescr":[{"Name":"Производитель","Value":"Val-0","id":0}],"isPacked":"true","sAlarm":null,"sFunctionalGroup":{"Name":"Test","sFunctionalGroups":[{"Name":"Value","sFunctionalGroups":null,"sRole":[{"ID":1,"Role":"Value"}]}],"sRole":null},"sVariable":[{"AccessRead":true,"AccessWrite":true,"Archived":true,"DataType":"INT32","EngUnit":"","ID":1,"Name":"test"}]}}}
+09/11/17 02:59:44,880 PM INFO -> Принято 
+{"id":1,"jsonrpc":"2.0","result":null}
+
+09/11/17 02:59:44,885 PM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"OpenData","params":{"ConfigID":"11/09/17 02:59:39 PM","SN":"333333333333333333333333333333333333","sDataValue":[{"DateTime":"\/Date(1510228781000+0300)\/","ID":1,"Status":0,"Value":"1"}],"sStatus":{"AlarmLevel":0,"Messages":["Control chenal"]}}}
+09/11/17 02:59:47,895 PM INFO -> Принято 
+{"id":1,"jsonrpc":"2.0","result":{"DataWriteValue":null,"ReadIDs":null,"SessionID":"1c1db424-ff59-47e9-9710-acb21f64adf2","isRequiredUpdate":false}}
+
+09/11/17 02:59:47,899 PM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"OpenData","params":{"ConfigID":"11/09/17 02:59:39 PM","SN":"333333333333333333333333333333333333","sDataValue":[{"DateTime":"\/Date(1510228782000+0300)\/","ID":1,"Status":0,"Value":"3"}],"sStatus":{"AlarmLevel":0,"Messages":["Control chenal"]}}}
+09/11/17 02:59:50,912 PM INFO -> Принято 
+{"id":1,"jsonrpc":"2.0","result":{"DataWriteValue":null,"ReadIDs":null,"SessionID":"1d30ca24-0cdf-4232-bf17-7c24d4afec2d","isRequiredUpdate":false}}
+
+09/11/17 02:59:50,916 PM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"OpenData","params":{"ConfigID":"11/09/17 02:59:39 PM","SN":"333333333333333333333333333333333333","sDataValue":[{"DateTime":"\/Date(1510228783000+0300)\/","ID":1,"Status":0,"Value":"6"}],"sStatus":{"AlarmLevel":0,"Messages":["Control chenal"]}}}
+09/11/17 02:59:53,934 PM INFO -> Принято 
+{"id":1,"jsonrpc":"2.0","result":{"DataWriteValue":null,"ReadIDs":null,"SessionID":"e00e603e-0ea6-4bad-9f34-c7c7f5027dd4","isRequiredUpdate":false}}
+
+10/11/17 01:04:50,971 PM INFO -> Обычное сообщение
+10/11/17 01:04:50,991 PM ERROR -> Ошибка должна стать красной
+10/11/17 01:04:50,991 PM WARNING -> А предупреждение желтым
+10/11/17 01:04:53,511 PM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"OpenData","params":{"ConfigID":"11/10/17 01:04:50 PM","SN":"333333333333333333333333333333333333","sDataValue":[{"DateTime":"\/Date(1510308291000+0300)\/","ID":1,"Status":0,"Value":"0"}],"sStatus":{"AlarmLevel":0,"Messages":["Control chenal"]}}}
+10/11/17 01:04:53,770 PM INFO -> Принято 
+{"id":1,"jsonrpc":"2.0","result":{"DataWriteValue":null,"ReadIDs":null,"SessionID":"279c72ca-5237-4688-8486-cd0abbb3dd82","isRequiredUpdate":true}}
+
+10/11/17 01:04:53,773 PM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"SetMetaData","params":{"SessionID":"279c72ca-5237-4688-8486-cd0abbb3dd82","sConfigDevice":{"PropertyDescr":[{"Name":"Производитель","Value":"Val-0","id":0}],"isPacked":"true","sAlarm":null,"sFunctionalGroup":{"Name":"Test","sFunctionalGroups":[{"Name":"Value","sFunctionalGroups":null,"sRole":[{"ID":1,"Role":"Value"}]}],"sRole":null},"sVariable":[{"AccessRead":true,"AccessWrite":true,"Archived":true,"DataType":"INT32","EngUnit":"","ID":1,"Name":"test"}]}}}
+10/11/17 01:04:56,784 PM INFO -> Принято 
+{"id":1,"jsonrpc":"2.0","result":null}
+
+10/11/17 01:04:56,786 PM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"OpenData","params":{"ConfigID":"11/10/17 01:04:50 PM","SN":"333333333333333333333333333333333333","sDataValue":[{"DateTime":"\/Date(1510308292000+0300)\/","ID":1,"Status":0,"Value":"1"}],"sStatus":{"AlarmLevel":0,"Messages":["Control chenal"]}}}
+10/11/17 01:04:59,798 PM INFO -> Принято 
+{"id":1,"jsonrpc":"2.0","result":{"DataWriteValue":null,"ReadIDs":null,"SessionID":"a6dd86d2-aab4-45d1-878f-1327871b1284","isRequiredUpdate":false}}
+
+10/11/17 01:04:59,799 PM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"OpenData","params":{"ConfigID":"11/10/17 01:04:50 PM","SN":"333333333333333333333333333333333333","sDataValue":[{"DateTime":"\/Date(1510308293000+0300)\/","ID":1,"Status":0,"Value":"3"}],"sStatus":{"AlarmLevel":0,"Messages":["Control chenal"]}}}
+10/11/17 01:05:02,812 PM INFO -> Принято 
+{"id":1,"jsonrpc":"2.0","result":{"DataWriteValue":null,"ReadIDs":null,"SessionID":"b6789d11-57f2-43c2-8012-fc032344593c","isRequiredUpdate":false}}
+
+10/11/17 01:05:02,813 PM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"OpenData","params":{"ConfigID":"11/10/17 01:04:50 PM","SN":"333333333333333333333333333333333333","sDataValue":[{"DateTime":"\/Date(1510308294000+0300)\/","ID":1,"Status":0,"Value":"6"}],"sStatus":{"AlarmLevel":0,"Messages":["Control chenal"]}}}
+10/11/17 01:05:05,827 PM INFO -> Принято 
+{"id":1,"jsonrpc":"2.0","result":{"DataWriteValue":null,"ReadIDs":null,"SessionID":"a38364b7-f418-4e33-b9c6-ca0f7c9da028","isRequiredUpdate":false}}
+
+10/11/17 01:27:28,146 PM INFO -> Обычное сообщение
+10/11/17 01:27:28,147 PM ERROR -> Ошибка должна стать красной
+10/11/17 01:27:28,148 PM WARNING -> А предупреждение желтым
+10/11/17 01:27:30,669 PM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"OpenData","params":{"ConfigID":"11/10/17 01:27:28 PM","SN":"333333333333333333333333333333333333","sDataValue":[{"DateTime":"\/Date(1510309649000+0300)\/","ID":1,"Status":0,"Value":"0"}],"sStatus":{"AlarmLevel":0,"Messages":["Control chenal"]}}}
+10/11/17 01:27:30,938 PM INFO -> Принято 
+{"id":1,"jsonrpc":"2.0","result":{"DataWriteValue":null,"ReadIDs":null,"SessionID":"b7d8e31c-7617-498b-93ea-f5c189ec411e","isRequiredUpdate":true}}
+
+10/11/17 01:27:30,941 PM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"SetMetaData","params":{"SessionID":"b7d8e31c-7617-498b-93ea-f5c189ec411e","sConfigDevice":{"PropertyDescr":[{"Name":"Производитель","Value":"Val-0","id":0}],"isPacked":"true","sAlarm":null,"sFunctionalGroup":{"Name":"Test","sFunctionalGroups":[{"Name":"Value","sFunctionalGroups":null,"sRole":[{"ID":1,"Role":"Value"}]}],"sRole":null},"sVariable":[{"AccessRead":true,"AccessWrite":true,"Archived":true,"DataType":"INT32","EngUnit":"","ID":1,"Name":"test"}]}}}
+10/11/17 01:27:33,950 PM INFO -> Принято 
+{"id":1,"jsonrpc":"2.0","result":null}
+
+10/11/17 01:27:33,953 PM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"OpenData","params":{"ConfigID":"11/10/17 01:27:28 PM","SN":"333333333333333333333333333333333333","sDataValue":[{"DateTime":"\/Date(1510309650000+0300)\/","ID":1,"Status":0,"Value":"1"}],"sStatus":{"AlarmLevel":0,"Messages":["Control chenal"]}}}
+10/11/17 01:27:36,961 PM INFO -> Принято 
+{"id":1,"jsonrpc":"2.0","result":{"DataWriteValue":null,"ReadIDs":null,"SessionID":"7bdc76a6-cfda-488b-908b-f04f93f68e29","isRequiredUpdate":false}}
+
+10/11/17 01:27:36,962 PM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"OpenData","params":{"ConfigID":"11/10/17 01:27:28 PM","SN":"333333333333333333333333333333333333","sDataValue":[{"DateTime":"\/Date(1510309651000+0300)\/","ID":1,"Status":0,"Value":"3"}],"sStatus":{"AlarmLevel":0,"Messages":["Control chenal"]}}}
+10/11/17 01:27:39,990 PM INFO -> Принято 
+{"id":1,"jsonrpc":"2.0","result":{"DataWriteValue":null,"ReadIDs":null,"SessionID":"15fb06cc-68ae-4d56-88fb-978461692915","isRequiredUpdate":false}}
+
+10/11/17 01:27:39,991 PM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"OpenData","params":{"ConfigID":"11/10/17 01:27:28 PM","SN":"333333333333333333333333333333333333","sDataValue":[{"DateTime":"\/Date(1510309652000+0300)\/","ID":1,"Status":0,"Value":"6"}],"sStatus":{"AlarmLevel":0,"Messages":["Control chenal"]}}}
+10/11/17 01:27:43,001 PM INFO -> Принято 
+{"id":1,"jsonrpc":"2.0","result":{"DataWriteValue":null,"ReadIDs":null,"SessionID":"bc03d4aa-37e9-4b36-b351-76d4d8645c53","isRequiredUpdate":false}}
+
+13/11/17 08:32:48,083 AM INFO -> Обычное сообщение
+13/11/17 08:32:48,095 AM ERROR -> Ошибка должна стать красной
+13/11/17 08:32:48,096 AM WARNING -> А предупреждение желтым
+13/11/17 08:32:48,116 AM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"OpenData","params":{"ConfigID":"11/13/17 08:32:48 AM","SN":"333333333333333333333333333333333333","sDataValue":[{"DateTime":"\/Date(1510551169000+0300)\/","ID":1,"Status":0,"Value":"0"}],"sStatus":{"AlarmLevel":0,"Messages":["Control chenal"]}}}
+13/11/17 08:32:48,397 AM INFO -> Принято 
+{"id":1,"jsonrpc":"2.0","result":{"DataWriteValue":null,"ReadIDs":null,"SessionID":"4ad0f6b2-97b6-4770-ae09-5dcf76875cc6","isRequiredUpdate":true}}
+
+13/11/17 08:32:48,400 AM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"SetMetaData","params":{"SessionID":"4ad0f6b2-97b6-4770-ae09-5dcf76875cc6","sConfigDevice":{"PropertyDescr":[{"Name":"Производитель","Value":"Val-0","id":0}],"isPacked":"true","sAlarm":null,"sFunctionalGroup":{"Name":"Test","sFunctionalGroups":[{"Name":"Value","sFunctionalGroups":null,"sRole":[{"ID":1,"Role":"Value"}]}],"sRole":null},"sVariable":[{"AccessRead":true,"AccessWrite":true,"Archived":true,"DataType":"INT32","EngUnit":"","ID":1,"Name":"test"}]}}}
+13/11/17 08:32:51,421 AM INFO -> Принято 
+{"id":1,"jsonrpc":"2.0","result":null}
+
+13/11/17 08:32:51,423 AM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"OpenData","params":{"ConfigID":"11/13/17 08:32:48 AM","SN":"333333333333333333333333333333333333","sDataValue":[{"DateTime":"\/Date(1510551170000+0300)\/","ID":1,"Status":0,"Value":"1"}],"sStatus":{"AlarmLevel":0,"Messages":["Control chenal"]}}}
+13/11/17 08:32:54,454 AM INFO -> Принято 
+{"id":1,"jsonrpc":"2.0","result":{"DataWriteValue":null,"ReadIDs":null,"SessionID":"6c7a05f3-24c5-4110-9bc3-2cc644ac4f11","isRequiredUpdate":false}}
+
+13/11/17 08:32:54,459 AM INFO -> Отправлено 
+{"id":1,"jsonrpc":"2.0","method":"OpenData","params":{"ConfigID":"11/13/17 08:32:48 AM","SN":"333333333333333333333333333333333333","sDataValue":[{"DateTime":"\/Date(1510551171000+0300)\/","ID":1,"Status":0,"Value":"3"}],"sStatus":{"AlarmLevel":0,"Messages":["Control chenal"]}}}
+13/11/17 08:32:56,670 AM ERROR -> Разрыв соединения

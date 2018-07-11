@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="SourceFiles"
+                   displayName="Исходные файлы"
+                   projectFiles="true">
+      <itemPath>axiopcjsonclient.cpp</itemPath>
+      <itemPath>device.cpp</itemPath>
+      <itemPath>simpleclient.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles"
+                   displayName="Файлы заголовков"
+                   projectFiles="true">
+      <itemPath>axiopcjsonclient.h</itemPath>
+      <itemPath>device.h</itemPath>
+      <itemPath>easylogging++.cc</itemPath>
+      <itemPath>easylogging++.h</itemPath>
+      <itemPath>json.hpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Файлы ресурсов"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Файлы тестов"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Важные файлы"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <itemPath>Makefile</itemPath>
+    <itemPath>Test</itemPath>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <standard>8</standard>
+        </ccTool>
+      </compileType>
+      <item path="Makefile" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Test" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="axiopcjsonclient.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="axiopcjsonclient.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="device.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="device.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="easylogging++.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="easylogging++.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="json.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="simpleclient.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="Makefile" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Test" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="axiopcjsonclient.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="axiopcjsonclient.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="device.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="device.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="easylogging++.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="easylogging++.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="json.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="simpleclient.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

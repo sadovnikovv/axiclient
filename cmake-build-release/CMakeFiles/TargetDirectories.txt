@@ -1,0 +1,4 @@
+/vagrant/axiclient/cmake-build-release/CMakeFiles/edit_cache.dir
+/vagrant/axiclient/cmake-build-release/CMakeFiles/rebuild_cache.dir
+/vagrant/axiclient/cmake-build-release/CMakeFiles/axiclient.dir
+/vagrant/axiclient/cmake-build-release/CMakeFiles/axiclient_core.dir
