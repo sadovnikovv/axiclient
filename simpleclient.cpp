@@ -121,21 +121,27 @@ int main(int argc, char** argv) {
         LOG(ERROR) << "Ошибка должна стать красной";
         LOG(WARNING) << "А предупреждение желтым";
         /* Цикл отправки сообщений */
-        for (i = 1; i <= 4; i++) {
+        for (i = 1; i <= 400; i++) {
             cout << endl << endl << endl; //Интервал
 
             json sStatus;
             sStatus ["AlarmLevel"] = 0;
             sStatus ["Messages"] = {"Control chenal"};
 
-            char sum_value[20];
-            sprintf(sum_value, "%d", sum);
 
+            ifstream file("/sys/class/gpio/gpio40/value");//чтение GPIO
+            file.seekg (0, file.end);
+            int length = file.tellg();
+            file.seekg (0, file.beg);
+            char * buffer = new char [length];
+            file.read (buffer,1);
+            file.close();
+            
             json sDataValue;
             sDataValue ["DateTime"] = CustomDateTimeFormat(rawtime + i);
             sDataValue ["ID"] = id;
             sDataValue ["Status"] = 0;
-            sDataValue ["Value"] = sum_value; //sDataValue ["Value"] = "12";
+            sDataValue ["Value"] = buffer;
 
             json OpenData;
             OpenData ["ConfigID"] = buffertime;
@@ -155,6 +161,7 @@ int main(int argc, char** argv) {
             PropertyDescr ["Name"] = "Производитель";
             PropertyDescr ["Value"] = "Val-0";
 
+
             json sAlarm;
             sAlarm ["Name"] = "авария 1";
             sAlarm ["ID"] = 6;
@@ -162,7 +169,7 @@ int main(int argc, char** argv) {
             sAlarm ["Priority"] = 0;
 
             json sVariable;
-            sVariable ["Name"] = "test";
+            sVariable ["Name"] = "GPIO40";
             sVariable ["ID"] = 1;
             sVariable ["AccessWrite"] = true;
             sVariable ["AccessRead"] = true;
@@ -180,7 +187,7 @@ int main(int argc, char** argv) {
             sFunctionalGroups["sRole"] = {sRole};
 
             json sFunctionalGroup;
-            sFunctionalGroup["Name"] = "Test";
+            sFunctionalGroup["Name"] = "GPIO1";
             sFunctionalGroup["sFunctionalGroups"] = {sFunctionalGroups};
             sFunctionalGroup["sRole"] = nullptr;
 
