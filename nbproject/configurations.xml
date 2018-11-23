@@ -11,7 +11,6 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Файлы заголовков"
                    projectFiles="true">
-      <itemPath>GPIO.h</itemPath>
       <itemPath>axiopcjsonclient.h</itemPath>
       <itemPath>device.h</itemPath>
       <itemPath>easylogging++.cc</itemPath>
@@ -49,8 +48,6 @@
           <standard>8</standard>
         </ccTool>
       </compileType>
-      <item path="GPIO.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="Makefile" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Test" ex="false" tool="3" flavor2="0">
@@ -92,8 +89,6 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="GPIO.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="Makefile" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Test" ex="false" tool="3" flavor2="0">
