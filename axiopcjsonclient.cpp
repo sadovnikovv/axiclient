@@ -118,9 +118,11 @@ static int wait_on_socket(curl_socket_t sockfd, int for_recv, long timeout_ms) {
     fd_set infd, outfd, errfd;
     int res;
 
-    tv.tv_sec = timeout_ms / 1000;
-    tv.tv_usec = (timeout_ms % 1000) * 1000;
-
+//    tv.tv_sec = timeout_ms / 1000;
+//    tv.tv_usec = (timeout_ms % 1000) * 1000;
+    tv.tv_sec = timeout_ms / 2000;
+    tv.tv_usec = (timeout_ms % 2000) * 99000;
+    
     FD_ZERO(&infd);
     FD_ZERO(&outfd);
     FD_ZERO(&errfd);
@@ -159,7 +161,8 @@ void AxiOpcJsonClient::SendRPCMessage(const std::string &message, std::string &r
     
 
     // changed message
-    char temp_test[2048];
+//    char temp_test[2048];//в этот размер влезает 9 gpio каналов
+    char temp_test[65535];//размер буфера на отправку (больше сообщений -> больше буфер)
     memset(temp_test, 0, sizeof (temp_test));
     strcpy(temp_test, message.c_str());
     char what[] = {0x5C, 0x5C, 0};

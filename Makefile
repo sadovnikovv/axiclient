@@ -12,7 +12,7 @@
 #apt-get install libssl-dev
 #apt-get install liblog4cpp5-dev
 CC=g++
-SOURCES=simpleclient.cpp easylogging++.cc axiopcjsonclient.cpp
+SOURCES=simpleclient.cpp easylogging++.cc axiopcjsonclient.cpp function.cpp
 LIB=-ljsoncpp -lcurl -ljsonrpccpp-common -ljsonrpccpp-client -lz 
 STD="-std=c++11"
 EXECUTABLE=Axitech_Test

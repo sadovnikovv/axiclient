@@ -35,9 +35,11 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/GPIO.o \
 	${OBJECTDIR}/axiopcjsonclient.o \
 	${OBJECTDIR}/device.o \
 	${OBJECTDIR}/easylogging++.o \
+	${OBJECTDIR}/function.o \
 	${OBJECTDIR}/simpleclient.o
 
 
@@ -65,6 +67,10 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libaxiclient.${CND_DLIB_EXT}: ${OBJEC
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libaxiclient.${CND_DLIB_EXT} ${OBJECTFILES} ${LDLIBSOPTIONS} -shared -fPIC
 
+${OBJECTDIR}/GPIO.o: GPIO.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	$(COMPILE.cc) -O2 -fPIC  -o ${OBJECTDIR}/GPIO.o GPIO.cpp
+
 ${OBJECTDIR}/axiopcjsonclient.o: axiopcjsonclient.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	$(COMPILE.cc) -O2 -fPIC  -o ${OBJECTDIR}/axiopcjsonclient.o axiopcjsonclient.cpp
@@ -76,6 +82,10 @@ ${OBJECTDIR}/device.o: device.cpp
 ${OBJECTDIR}/easylogging++.o: easylogging++.cc
 	${MKDIR} -p ${OBJECTDIR}
 	$(COMPILE.cc) -O2 -fPIC  -o ${OBJECTDIR}/easylogging++.o easylogging++.cc
+
+${OBJECTDIR}/function.o: function.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	$(COMPILE.cc) -O2 -fPIC  -o ${OBJECTDIR}/function.o function.cpp
 
 ${OBJECTDIR}/simpleclient.o: simpleclient.cpp
 	${MKDIR} -p ${OBJECTDIR}
