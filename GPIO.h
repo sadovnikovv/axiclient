@@ -14,7 +14,10 @@
 #ifndef GPIO_H
 #define GPIO_H
 
-int main(int argc, char ** argv)
+class SAMPLE{
+public:
+private:
+}
 
 
 

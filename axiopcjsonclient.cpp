@@ -33,8 +33,8 @@ char *_replace_string(char *str, const char *what, const char *with) {
     if (strcmp(str, "") == 0) {
         //printf("Empty string, nothing to process\n");
         LOG(ERROR) << "Пустая срока, ничего не обработать." << endl;
-        
-        
+
+
         //return NULL;
         //throw 555;
     }
@@ -117,12 +117,10 @@ static int wait_on_socket(curl_socket_t sockfd, int for_recv, long timeout_ms) {
     struct timeval tv;
     fd_set infd, outfd, errfd;
     int res;
+    cout << "Поиск утечки времени 1" << endl;
+    tv.tv_sec = timeout_ms / 1000;
+    tv.tv_usec = (timeout_ms % 1000) * 1000;
 
-//    tv.tv_sec = timeout_ms / 1000;
-//    tv.tv_usec = (timeout_ms % 1000) * 1000;
-    tv.tv_sec = timeout_ms / 2000;
-    tv.tv_usec = (timeout_ms % 2000) * 99000;
-    
     FD_ZERO(&infd);
     FD_ZERO(&outfd);
     FD_ZERO(&errfd);
@@ -147,8 +145,9 @@ void init_string(struct string11 *s) {
 
 AxiOpcJsonClient::AxiOpcJsonClient(const std::string &url)
 : url(url) {
-    this->timeout = 5000;
+    this->timeout = 5000; //здесь бывает баг arr666
     curl = curl_easy_init();
+        cout << "Поиск утечки времени 2" << endl;
 }
 
 AxiOpcJsonClient::~AxiOpcJsonClient() {
@@ -158,11 +157,11 @@ AxiOpcJsonClient::~AxiOpcJsonClient() {
 void AxiOpcJsonClient::SendRPCMessage(const std::string &message, std::string &result) {
 
     cout << "message: " << message << endl;
-    
+
 
     // changed message
-//    char temp_test[2048];//в этот размер влезает 9 gpio каналов
-    char temp_test[65535];//размер буфера на отправку (больше сообщений -> больше буфер)
+    //    char temp_test[2048];//в этот размер влезает 9 gpio каналов
+    char temp_test[65535]; //размер буфера на отправку (больше сообщений -> больше буфер)
     memset(temp_test, 0, sizeof (temp_test));
     strcpy(temp_test, message.c_str());
     char what[] = {0x5C, 0x5C, 0};
@@ -193,55 +192,37 @@ void AxiOpcJsonClient::SendRPCMessage(const std::string &message, std::string &r
     curl_easy_setopt(curl, CURLOPT_CONNECT_ONLY, 1L);
     curl_easy_setopt(curl, CURLOPT_TIMEOUT_MS, timeout);
     res = curl_easy_perform(curl);
-
     if (res != CURLE_OK) {
         std::stringstream str;
         str << "libcurl error: " << res;
-
         if (res == 7)
             str << " -> Could not connect to " << "webtlm.ru:510";
         else if (res == 28)
             str << " -> Operation timed out";
-        //throw JsonRpcException(Errors::ERROR_CLIENT_CONNECTOR, str.str());
         throw 666;
     }
-
     res = curl_easy_getinfo(curl, CURLINFO_LASTSOCKET, &sockextr);
-
-    if (CURLE_OK != res) 
-    {
+    if (CURLE_OK != res) {
         printf("Error: %s\n", curl_easy_strerror(res));
         return;
     }
-
     sockfd = (curl_socket_t) sockextr;
-
-    if (!wait_on_socket(sockfd, 0, 10000L)) 
-    {
+    if (!wait_on_socket(sockfd, 0, 10000L)) {
         std::cout << ("Timeout error.") << std::endl;
         return;
     }
-
     int32_t i;
-
     res = curl_easy_send(curl, request, 4, &iolen);
     nread = (curl_off_t) iolen;
-    //printf("request %"
-    //       CURL_FORMAT_CURL_OFF_T
-    //       " bytes:\n", nread);
     memcpy(&i, request, sizeof (int32_t));
-    //std::cout << i << std::endl;
-    //res = curl_easy_send(curl, message.c_str(), strlen(message.c_str()), &iolen);
     res = curl_easy_send(curl, temp_test, strlen(temp_test), &iolen);
     nread = (curl_off_t) iolen;
-    //printf("request %"
-    //     CURL_FORMAT_CURL_OFF_T
-    //   " bytes:\n", nread);
     LOG(INFO) << "Отправлено " << endl << temp_test;
     cout << endl;
     if (CURLE_OK != res) {
         //printf("Error: %s\n", curl_easy_strerror(res));
-        LOG(ERROR) << "Error: " << curl_easy_strerror(res) << endl;;
+        LOG(ERROR) << "Error: " << curl_easy_strerror(res) << endl;
+        ;
         return;
     }
     //std::cout << "Reading header ";
@@ -280,7 +261,7 @@ void AxiOpcJsonClient::SendRPCMessage(const std::string &message, std::string &r
                 cout << "Throw 561" << endl;
                 throw 561;
             }
-               
+
             // -- some replace magic
             //
             result = std::string(temp2);
